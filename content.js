@@ -1,4 +1,33 @@
 // content.js
+const API_KEY = process.env.VISION_API_KEY;
+
+async function callVisionAPI(imageData) {
+  try {
+    const response = await fetch(`https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}`, {
+      method: 'POST',
+      body: JSON.stringify({
+        requests: [{
+          image: { content: imageData },
+          features: [
+            { type: 'LABEL_DETECTION' },
+            { type: 'OBJECT_LOCALIZATION' },
+            { type: 'TEXT_DETECTION' }
+          ]
+        }]
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`API call failed: ${response.statusText}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('Vision API error:', error);
+    return null;
+  }
+}
+
 async function initVisionAltText() {
   const isPlatform = {
     x: window.location.hostname === 'x.com',

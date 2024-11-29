@@ -1,0 +1,1 @@
+export const VISION_API_KEY = 'your-api-key-here';

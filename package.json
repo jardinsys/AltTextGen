@@ -1,0 +1,11 @@
+{
+    "name": "secure-vision-extension",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "VISION_API_KEY=your-api-key-here webpack --mode production"
+    },
+    "devDependencies": {
+      "webpack": "^5.89.0",
+      "webpack-cli": "^5.1.4"
+    }
+  }
