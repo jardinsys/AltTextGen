@@ -1,19 +1,144 @@
+<!-- popup.html -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AI Alt Text Settings</title>
+  <title>AI Alt Text Generator</title>
   <style>
-    body { width: 300px; padding: 10px; }
-    .api-key { margin: 10px 0; }
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 12px;
+    }
+
+    .header img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #1a1a1a;
+    }
+
+    .settings {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .api-key {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    label {
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .support {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .support-text {
+      font-size: 13px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    .kofi-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #FF5E5B;
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    .kofi-button:hover {
+      background-color: #e54844;
+    }
+
+    .kofi-icon {
+      width: 20px;
+      height: 20px;
+    }
   </style>
 </head>
 <body>
-  <h2>Settings</h2>
-  <div class="api-key">
-    <label>Google Cloud Vision API Key:</label>
-    <input type="password" id="apiKey">
-    <button id="saveKey">Save</button>
+  <div class="container">
+    <div class="header">
+      <img src="icons/icon48.png" alt="Extension icon">
+      <h1>AI Alt Text Generator</h1>
+    </div>
+
+    <div class="settings">
+      <div class="api-key">
+        <label for="apiKey">Google Cloud Vision API Key</label>
+        <input type="password" id="apiKey" placeholder="Enter your API key">
+        <button id="saveKey">Save Key</button>
+      </div>
+    </div>
+
+    <div class="support">
+      <p class="support-text">If you find this extension helpful, consider supporting its development!</p>
+      <a href="https://ko-fi.com/jardinsys" target="_blank" class="kofi-button">
+        <svg class="kofi-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z" fill="currentColor"/>
+        </svg>
+        Support on Ko-fi
+      </a>
+    </div>
   </div>
-  <script src="popup.js"></script>
+  <script src="popup.bundle.js"></script>
 </body>
 </html>
