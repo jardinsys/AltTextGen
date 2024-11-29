@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Alt Text Helper",
+    "version": "1.0",
+    "description": "Automatically adds default alt text to media uploads",
+    "permissions": ["activeTab"],
+    "host_permissions": [
+      "https://x.com/*",
+      "https://bsky.app/*"
+    ],
+    "content_scripts": [{
+      "matches": ["https://x.com/*", "https://bsky.app/*"],
+      "js": ["content.js"]
+    }]
+  }
