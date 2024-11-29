@@ -1,24 +1,18 @@
-// popup.html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Social Media Enhancement</title>
+  <title>AI Alt Text Settings</title>
   <style>
-    body {
-      width: 300px;
-      padding: 10px;
-    }
-    .settings {
-      margin: 10px 0;
-    }
+    body { width: 300px; padding: 10px; }
+    .api-key { margin: 10px 0; }
   </style>
 </head>
 <body>
-  <h2>Enhancement Settings</h2>
-  <div class="settings">
-    <label>
-      <input type="checkbox" id="feature1"> Enable Feature 1
-    </label>
+  <h2>Settings</h2>
+  <div class="api-key">
+    <label>Google Cloud Vision API Key:</label>
+    <input type="password" id="apiKey">
+    <button id="saveKey">Save</button>
   </div>
   <script src="popup.js"></script>
 </body>

@@ -1,15 +1,22 @@
 {
-    "manifest_version": 3,
-    "name": "Alt Text Helper",
-    "version": "1.0",
-    "description": "Automatically adds default alt text to media uploads",
-    "permissions": ["activeTab"],
-    "host_permissions": [
-      "https://x.com/*",
-      "https://bsky.app/*"
-    ],
-    "content_scripts": [{
-      "matches": ["https://x.com/*", "https://bsky.app/*"],
-      "js": ["content.js"]
-    }]
+  "manifest_version": 3,
+  "name": "AI Alt Text Generator",
+  "version": "1.0",
+  "description": "Uses Google Cloud Vision to generate alt text for images",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://bsky.app/*",
+    "https://vision.googleapis.com/*"
+  ],
+  "content_scripts": [{
+    "matches": ["https://x.com/*", "https://bsky.app/*"],
+    "js": ["content.js"]
+  }],
+  "action": {
+    "default_popup": "popup.html"
   }
+}
