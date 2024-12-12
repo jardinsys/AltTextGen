@@ -1,11 +1,17 @@
 {
-    "name": "secure-vision-extension",
-    "version": "1.0.0",
-    "scripts": {
-      "build": "VISION_API_KEY=your-api-key-here webpack --mode production"
-    },
-    "devDependencies": {
-      "webpack": "^5.89.0",
-      "webpack-cli": "^5.1.4"
-    }
-  }
+  "name": "secure-vision-extension",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "VISION_API_KEY=your-api-key-here webpack --mode production"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "description": "Using Google Cloud Vision API to generate Alt Text for X/Twitter and BlueSky",
+  "main": "config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
