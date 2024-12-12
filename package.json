@@ -2,7 +2,7 @@
   "name": "secure-vision-extension",
   "version": "1.0.0",
   "scripts": {
-    "build": "VISION_API_KEY=your-api-key-here webpack --mode production"
+    "build": "webpack --mode production"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^12.0.2",
